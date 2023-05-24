@@ -30,23 +30,23 @@ try:
     # create the table that holds raw data
     table_sql = f"""
     CREATE TABLE IF NOT EXISTS {database_name}.{table_name} (
-        "Division" VARCHAR(150), 
-        "BatchTransactionID" VARCHAR(150), 
-        "TransactionDate" VARCHAR(150), 
-        "CardPostingDt" VARCHAR(150), 
-        "MerchantName" VARCHAR(150), 
-        "TransactionAmt" VARCHAR(150), 
-        "TrxCurrency" VARCHAR(150), 
-        "OriginalAmount" VARCHAR(150), 
-        "OriginalCurrency" VARCHAR(150), 
-        "GLAccount" VARCHAR(150), 
-        "GLAccountDescription" VARCHAR(150), 
-        "CostCenterWBSElementOrder" VARCHAR(150), 
-        "CostCenterWBSElementOrderDescription" VARCHAR(150), 
-        "MerchantType" VARCHAR(150), 
-        "MerchantTypeDescription" VARCHAR(150), 
-        "Purpose" VARCHAR(150), 
-        "SourceFileName" VARCHAR(150)
+        "Division" TEXT, 
+        "BatchTransactionID" TEXT, 
+        "TransactionDate" TEXT, 
+        "CardPostingDate" TEXT, 
+        "MerchantName" TEXT, 
+        "TransactionAmount" TEXT, 
+        "TransactionCurrency" TEXT, 
+        "OriginalAmount" TEXT, 
+        "OriginalCurrency" TEXT, 
+        "GLAccount" TEXT, 
+        "GLAccountDescription" TEXT, 
+        "CostCenterWBSElementOrder" TEXT, 
+        "CostCenterWBSElementOrderDescription" TEXT, 
+        "MerchantType" TEXT, 
+        "MerchantTypeDescription" TEXT, 
+        "Purpose" TEXT, 
+        "SourceFileName" TEXT
     )
     """
     cursor.execute(table_sql)     
@@ -65,10 +65,4 @@ try:
     
 except Exception as e:
         print(f"An error occurred {e}")
-
-
-# In[ ]:
-
-
-
 
